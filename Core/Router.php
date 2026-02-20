@@ -12,12 +12,14 @@ class Router
         $urlParts = explode("/", $url);
 
         $className = $urlParts[0];
-        $methodName = $urlParts[1] ?? 'index';
+        $methodName = $urlParts[1];
 
         $className = ucfirst($className);
         $className = "App\\Controllers\\{$className}Controller";
 
-        $controller = new $className();
+        $controller = new $className($urlParts);
+        $controller->before();
         $controller->$methodName();
+        $controller->after();
     }
 }

@@ -7,6 +7,8 @@ use Core\Router;
 $router = new Router();
 $router->dispatch($_SERVER['REQUEST_URI']);
 
+exit;
+
 // use App\Models\StudentInfo;
 // use App\Models\TeacherInfo;
 

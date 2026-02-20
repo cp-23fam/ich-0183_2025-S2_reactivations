@@ -2,10 +2,9 @@
 
 namespace App\Controllers;
 
-class MeController
+class MeController extends AppController
 {
-    public function __construct()
-    {
-        echo "Me";
-    }
+    public function index() {}
+
+    public function view() {}
 }
