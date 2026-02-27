@@ -20,6 +20,6 @@ class AppController
         extract($this->view);
 
         $page = dirname(__DIR__) . '/Views/' . ucfirst($this->routeParams[0]) . '/' . lcfirst($this->routeParams[1]) . '.html';
-        require_once(dirname(__DIR__) . '/Views/Layout/base.html');
+        require_once($page);
     }
 }
